@@ -1,0 +1,58 @@
+<html>
+
+   <body>
+
+      <canvas id="folha" width="600" height="500"></canvas>
+
+        <script>
+        var folhaDesenho = document.getElementById("folha");
+        var areaDesenho = folhaDesenho.getContext("2d");
+
+        var larguraCampo = 600;
+        var alturaCampo = 500;
+        var espessuraRede = 5;
+
+        var posicaoBolaX = 10;
+        var posicaoBolay = 10;
+        var diametroBola = 10;
+
+        var contador = 0;
+
+        while (contador< 50) {
+
+          posicaoBolaX + 1;
+          posicaoBolay + 1;
+          contador = contador + 1;
+
+        }S
+
+
+      // campo
+      areaDesenho.fillStyle = '#FFFF00';
+      areaDesenho.fillRect(0, 0, larguraCampo, alturaCampo);
+      //bolinha
+      areaDesenho.fillStyle = '#ffffff';
+      areaDesenho.fillRect(posicaoBolaX - diametroBola / 2, posicaoBolay - diametroBola / 2, diametroBola, diametroBola);
+
+
+      // rede
+      areaDesenho.fillStyle = '#ffffff';
+      areaDesenho.fillRect(larguraCampo / 2 - espessuraRede / 2, 0, espessuraRede, alturaCampo);
+
+      //raquete 1
+      areaDesenho.fillStyle = '#ffffff';
+      areaDesenho.fillRect(0, 200, 10, 100);
+
+      //raquete 2
+      areaDesenho.fillStyle = '#ffffff';
+      areaDesenho.fillRect(590, 200, 10, 100);
+
+
+      posicaoBolaX = posicaoBolaX + 1;
+      posicaoBolay = posicaoBolay + 1;
+
+      </script>
+    </body>
+  </html>
+  git remote add origin https://github.com/Joao-pedro-ramos/jogo-html-two-racket-.git
+ git push -u origin master
